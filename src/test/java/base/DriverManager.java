@@ -13,8 +13,10 @@ public class DriverManager {
     public WebDriver getBrowserDriver(String driverName){
         if (driverName.equalsIgnoreCase("chrome")) {
             WebDriverManager.chromedriver().setup();
+
             ChromeOptions option = new ChromeOptions();
              driver = new ChromeDriver(option);
+             driver.manage().window().maximize();
         }else if(driverName.equalsIgnoreCase("firefox")){
             WebDriverManager.firefoxdriver().setup();
             driver = new FirefoxDriver();

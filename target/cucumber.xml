@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="3" time="25.721">
+<testcase classname="Validate Parallel run" name="JW Login Validation" time="5.143">
+<system-out><![CDATA[Given JW webpage is launched in "chrome"....................................passed
+When user clicks on login button............................................passed
+And user enters a "admin" and "admin".......................................passed
+And clicks on login arrow button............................................passed
+Then login is successful....................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Validate Parallel run" name="JW Design a new app" time="11.199">
+<system-out><![CDATA[Given JW webpage is launched in "chrome"....................................passed
+When user clicks on login button............................................passed
+And user enters a "admin" and "admin".......................................passed
+And clicks on login arrow button............................................passed
+And login is successful.....................................................passed
+And click on design new app button..........................................passed
+And enter "testappID3" and "testappName3"...................................passed
+And click save button.......................................................passed
+And publish the app.........................................................passed
+Then validate if "testappName3" app is published successfully...............passed
+]]></system-out>
+</testcase>
+<testcase classname="Validate Parallel run" name="JW Delete an existing app" time="9.178">
+<system-out><![CDATA[Given JW webpage is launched in "chrome"....................................passed
+When user clicks on login button............................................passed
+And user enters a "admin" and "admin".......................................passed
+And clicks on login arrow button............................................passed
+And login is successful.....................................................passed
+And click on admin arrow button.............................................passed
+And click on all apps.......................................................passed
+And click on "testappName3".................................................passed
+Then delete the app.........................................................passed
+]]></system-out>
+</testcase>
+</testsuite>

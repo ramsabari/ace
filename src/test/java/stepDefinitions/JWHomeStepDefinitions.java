@@ -29,7 +29,7 @@ public class JWHomeStepDefinitions {
         System.out.println("This is my First Before tag");
     }
 
-    @After
+/*    @After
     public void tearDown(Scenario scenario) throws IOException {
         if(scenario.isFailed()) {
             File sshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
@@ -37,7 +37,7 @@ public class JWHomeStepDefinitions {
             scenario.attach(sscontent, "image/png", "Screenshot");
         }
         driver.close();
-    }
+    }*/
 
     @Given("JW webpage is launched in {string}")
     public void JWWebpageIsLaunchedIn(String browsername) {
@@ -102,11 +102,13 @@ public class JWHomeStepDefinitions {
         driver.switchTo().alert().accept();
         driver.switchTo().defaultContent();
         driver.switchTo().frame("quickOverlayFrame");
+        Thread.sleep(2000);
         JWNewAppPage.clickAllApps();
     }
 
     @Then("validate if {string} app is published successfully")
-    public void validateIfAppIsPublishedSuccessfully(String arg0) {
+    public void validateIfAppIsPublishedSuccessfully(String arg0) throws InterruptedException {
+        Thread.sleep(1000);
         JWNewAppPage.checkIfAppIsPublished(arg0);
     }
 
@@ -122,9 +124,10 @@ public class JWHomeStepDefinitions {
     }
 
     @And("click on {string}")
-    public void clickOn(String arg0) {
+    public void clickOn(String arg0) throws InterruptedException {
         driver.switchTo().frame("quickOverlayFrame");
         JWNewAppPage.clickOnPublishedApp(arg0);
+        Thread.sleep(2000);
         JWNewAppPage.clickPublishedBtn();
     }
 

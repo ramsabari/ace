@@ -29,7 +29,7 @@ Scenario Outline: JW Login Validation
 
     Examples:
       |username|password|appId            |appName          |
-      |admin   |admin   |testappID19       |testappName19    |
+      |admin   |admin   |testappID3       |testappName3   |
 
   @FunctionalFlows
   Scenario Outline: JW Delete an existing app
@@ -43,5 +43,5 @@ Scenario Outline: JW Login Validation
     Then delete the app
 
     Examples:
-      |username|password|appName           |
-      |admin   |admin   |test1     |
+      |username|password|appName          |
+      |admin   |admin   |testappName3     |
